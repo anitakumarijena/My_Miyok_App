@@ -14,6 +14,7 @@ public class FamilyMembers extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         //create array of numbers
+        //Adding all miwok family words with english words with image
         ArrayList<Word> numberArray = new ArrayList<Word>();
         numberArray.add(new Word("father","әpә",R.drawable.family_father));
         numberArray.add(new Word("mother","әṭa",R.drawable.family_mother));
@@ -25,7 +26,7 @@ public class FamilyMembers extends AppCompatActivity {
         numberArray.add(new Word("younger sister","kolliti",R.drawable.family_younger_sister));
         numberArray.add(new Word("grandmother","ama",R.drawable.family_grandmother));
         numberArray.add(new Word("grandfather","paapa",R.drawable.family_grandfather));
-z
+
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
