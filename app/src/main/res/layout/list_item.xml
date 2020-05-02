@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+           xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:padding="16dp"
+
+    android:minHeight="@dimen/list_item_height"
+    android:background="@color/category_numbers"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
+        android:id="@+id/img1"/>
+    <LinearLayout
+        android:id="@+id/text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:background="@color/category_numbers"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="lutti"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:id="@+id/miwok_textView" />
+
+        <TextView
+
+            android:layout_weight="1"
+            android:gravity="top"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            tools:text="One"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:id="@+id/default_textView"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
