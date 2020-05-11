@@ -15,6 +15,7 @@ public class NumberActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         //create array of numbers
+        //Add picture to the numbers
         ArrayList<Word> numberArray = new ArrayList<Word>();
         numberArray.add(new Word("one","lutti",R.drawable.number_one));
         numberArray.add(new Word("two","otiiko",R.drawable.number_two));

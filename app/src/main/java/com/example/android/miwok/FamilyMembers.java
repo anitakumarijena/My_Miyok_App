@@ -13,8 +13,9 @@ public class FamilyMembers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        //create array of numbers
+        //create array of familyMember
         //Adding all miwok family words with english words with image
+        //Add pictures to the family member
         ArrayList<Word> numberArray = new ArrayList<Word>();
         numberArray.add(new Word("father","әpә",R.drawable.family_father));
         numberArray.add(new Word("mother","әṭa",R.drawable.family_mother));

@@ -14,7 +14,7 @@ public class Phrases extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-        //create array of numbers
+        //create array of phrase
         ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word("Where are you going?","minto wuksus"));
         phraseArray.add(new Word("What is your name?","tinnә oyaase'nә"));

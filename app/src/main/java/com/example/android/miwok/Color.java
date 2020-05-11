@@ -13,7 +13,9 @@ public class Color extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
-        //create array of numbers
+        //create array of colors
+        //Adding english words to the miyok word colors
+        //Adding picture of the colors
         ArrayList<Word> numberArray = new ArrayList<Word>();
         numberArray.add(new Word("red","weṭeṭṭi",R.drawable.color_red));
         numberArray.add(new Word("green","chokokki" ,R.drawable.color_green));
