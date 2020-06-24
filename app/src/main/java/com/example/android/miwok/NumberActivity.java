@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class NumberActivity extends AppCompatActivity {
 
+    private MediaPlayer mMediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,17 +21,17 @@ public class NumberActivity extends AppCompatActivity {
 
         //create array of numbers
         //Add picture to the numbers
-        ArrayList<Word> numberArray = new ArrayList<Word>();
-        numberArray.add(new Word("one","lutti",R.drawable.number_one));
-        numberArray.add(new Word("two","otiiko",R.drawable.number_two));
-        numberArray.add(new Word("three","tolookosu",R.drawable.number_three));
-        numberArray.add(new Word("four","oyyisa",R.drawable.number_four));
-        numberArray.add(new Word("five","massokka",R.drawable.number_five));
-        numberArray.add(new Word("six","temmoka",R.drawable.number_six));
-        numberArray.add(new Word("seven","kenekaku",R.drawable.number_seven));
-        numberArray.add(new Word("eight","kawinta",R.drawable.number_eight));
-        numberArray.add(new Word("nine","wo'e",R.drawable.number_nine));
-        numberArray.add(new Word("ten","na'accha",R.drawable.number_ten));
+        final ArrayList<Word> numberArray = new ArrayList<Word>();
+        numberArray.add(new Word("one","lutti",R.drawable.number_one,R.raw.number_one));
+        numberArray.add(new Word("two","otiiko",R.drawable.number_two,R.raw.number_two));
+        numberArray.add(new Word("three","tolookosu",R.drawable.number_three,R.raw.number_three));
+        numberArray.add(new Word("four","oyyisa",R.drawable.number_four,R.raw.number_four));
+        numberArray.add(new Word("five","massokka",R.drawable.number_five,R.raw.number_five));
+        numberArray.add(new Word("six","temmoka",R.drawable.number_six,R.raw.number_six));
+        numberArray.add(new Word("seven","kenekaku",R.drawable.number_seven,R.raw.number_seven));
+        numberArray.add(new Word("eight","kawinta",R.drawable.number_eight,R.raw.number_eight));
+        numberArray.add(new Word("nine","wo'e",R.drawable.number_nine,R.raw.number_nine));
+        numberArray.add(new Word("ten","na'accha",R.drawable.number_ten,R.raw.number_ten));
 
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
@@ -55,8 +56,12 @@ public class NumberActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                MediaPlayer mMediaPlayer = MediaPlayer.create(NumberActivity.this, R.raw.number_one);
-                mMediaPlayer.start();//
+                Word word=numberArray.get(position);
+                //Create and setup the{@link MediaPlayer} for the audio resource associated
+                //with the current word
+                mMediaPlayer = MediaPlayer.create(NumberActivity.this, word.getAudioResourceId());
+                //Start the audio file
+                mMediaPlayer.start();
             }
         });
     }
