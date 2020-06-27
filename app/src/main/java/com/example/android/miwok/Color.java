@@ -74,7 +74,7 @@ public class Color extends AppCompatActivity {
                 mMediaPlayer = MediaPlayer.create(Color.this, word.getAudioResourceId());
                 //Start the audio file
                 mMediaPlayer.start();// Setup a listener on the media player, so that we can stop and release the
-                // media player once the sound has finished playing.
+                // media player once the sound has finished playing.// No need to call prepare(); create() does that for you
                 mMediaPlayer.setOnCompletionListener(mCompletionListener);
             }
         });

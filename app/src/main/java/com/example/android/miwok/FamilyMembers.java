@@ -76,7 +76,7 @@ public class FamilyMembers extends AppCompatActivity {
                 //with the current word
                 mMediaPlayer = MediaPlayer.create(FamilyMembers.this, word.getAudioResourceId());
                 //Start the audio file
-                mMediaPlayer.start();
+                mMediaPlayer.start();// No need to call prepare(); create() does that for you
                 // Setup a listener on the media player, so that we can stop and release the
                 // media player once the sound has finished playing.
                 mMediaPlayer.setOnCompletionListener(mCompletionListener);
